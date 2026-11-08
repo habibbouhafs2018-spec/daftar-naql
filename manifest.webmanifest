@@ -1,0 +1,38 @@
+{
+  "id": "./",
+  "name": "دفتر النقل - المحاسبة والتسيير",
+  "short_name": "دفتر النقل",
+  "description": "نظام عربي لمحاسبة وتسيير شركة نقل البضائع البري",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "background_color": "#101a22",
+  "theme_color": "#081923",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
