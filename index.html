@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123047">
+<title>دفتر النقل | المحاسبة والتسيير</title>
+<style>
+:root{--navy:#123047;--blue:#176b87;--teal:#1b8a83;--bg:#f3f6f8;--ink:#20313d;--muted:#6c7c86;--line:#dce5e9;--white:#fff;--red:#b83d45;--gold:#b7791f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:10px 14px;background:var(--blue);color:white}button.secondary{background:#e8eff2;color:var(--navy)}button.danger{background:#fff0f0;color:var(--red)}button.small{padding:6px 9px;font-size:12px}.app{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.side{background:var(--navy);color:#fff;padding:22px 15px}.brand{font-size:21px;font-weight:bold;margin:5px 8px 4px}.subbrand{font-size:12px;color:#b9d0da;margin:0 8px 25px}.nav button{display:block;width:100%;text-align:right;background:transparent;color:#d9e6eb;margin:4px 0;padding:12px;border-radius:8px}.nav button.active,.nav button:hover{background:#ffffff1b;color:white}.main{padding:24px;min-width:0}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:22px}.top h1{font-size:23px;margin:0}.muted{color:var(--muted);font-size:13px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:18px 0}.card,.panel{background:white;border:1px solid var(--line);border-radius:13px;padding:17px;box-shadow:0 2px 8px #19374708}.card .label{color:var(--muted);font-size:13px}.card .num{font-size:25px;font-weight:bold;margin-top:9px}.panel{margin:14px 0}.panel h2{font-size:17px;margin:0 0 14px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:13px}.toolbar input{flex:1;min-width:180px}.field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}.field label{font-size:13px;color:#52636e}.field input,.field select,.field textarea,.toolbar input{border:1px solid var(--line);border-radius:8px;padding:10px;background:#fff;color:var(--ink);min-width:0}.gridform{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 13px}.wide{grid-column:1/-1}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:right;padding:11px 9px;border-bottom:1px solid #edf1f3;font-size:13px;white-space:nowrap}th{color:var(--muted);font-weight:600;background:#fafcfd}.empty{text-align:center;color:var(--muted);padding:28px}.pill{display:inline-block;border-radius:30px;padding:4px 9px;background:#eaf5f3;color:#167368;font-size:11px}.pill.red{background:#fff0f0;color:var(--red)}.hidden{display:none!important}.actions{display:flex;gap:5px}.notice{background:#fff8e8;border:1px solid #f0dfb7;padding:12px;border-radius:9px;color:#77561c;font-size:13px;line-height:1.7}.footer{font-size:11px;color:var(--muted);margin-top:25px}.mobilebar{display:none}.toast{position:fixed;bottom:20px;left:20px;background:#193b4c;color:white;padding:12px 18px;border-radius:10px;display:none;z-index:5}
+@media(max-width:900px){.app{grid-template-columns:1fr}.side{padding:12px}.brand{display:inline-block;margin-left:12px}.subbrand{display:inline}.nav{display:flex;overflow:auto;gap:5px}.nav button{white-space:nowrap;width:auto;margin:0;padding:9px 12px}.main{padding:15px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.top h1{font-size:19px}}
+@media(max-width:520px){.gridform{grid-template-columns:1fr}.wide{grid-column:auto}.cards{gap:8px}.card{padding:12px}.card .num{font-size:20px}.top{align-items:flex-start;flex-direction:column}}
+@media print{.side,.toolbar,.no-print,.actions{display:none!important}.app{display:block}.main{padding:0}.panel,.card{box-shadow:none;break-inside:avoid}}
+
+/* الوضع الداكن الافتراضي */
+:root{--navy:#081923;--blue:#2785a5;--teal:#38a69c;--bg:#101a22;--ink:#e7eef2;--muted:#9aabb5;--line:#2b3b46;--white:#182630;--red:#ff777e;--gold:#e5b75e}
+body{background:var(--bg);color:var(--ink)}
+.side{background:#081923}
+.nav button{color:#c6d6de}
+.nav button.active,.nav button:hover{background:#1b3a49;color:#fff}
+.card,.panel{background:#182630;border-color:#2b3b46;box-shadow:0 3px 12px #0003}
+.field label{color:#b1c0c8}
+.field input,.field select,.field textarea,.toolbar input{background:#101c25;border-color:#354955;color:#e7eef2;color-scheme:dark}
+.field input::placeholder,.toolbar input::placeholder{color:#80939e}
+th{background:#1d303b;color:#b2c2ca}
+td{border-bottom-color:#2b3b46;color:#e1e9ed}
+.pill{background:#173d3a;color:#72d4c7}
+.pill.red{background:#48282c;color:#ff9a9f}
+button.secondary{background:#263b47;color:#dce8ed}
+button.danger{background:#48282c;color:#ff9a9f}
+.notice{background:#3b321f;border-color:#66542d;color:#f1d28e}
+.empty{color:#9aabb5}
+.footer{color:#82949e}
+.toast{background:#29495a;color:#fff}
+::selection{background:#287f9a;color:white}
+
+</style>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#081923">
+<meta name="description" content="دفتر النقل - نظام محاسبة وتسيير شركة نقل البضائع">
+<link rel="icon" href="./icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+\n</head>
+<body>
+<div class="app">
+<aside class="side"><div class="brand">🚚 دفتر النقل</div><div class="subbrand">نظام المحاسبة والتسيير</div><nav class="nav" id="nav">
+<button class="active" data-page="dashboard">▦ لوحة القيادة</button><button data-page="trips">⇄ الرحلات</button><button data-page="customers">♙ الزبائن</button><button data-page="vehicles">▣ الشاحنات</button><button data-page="drivers">♟ السائقون</button><button data-page="invoices">▤ الفواتير</button><button data-page="expenses">− المصاريف</button><button data-page="accounts">◉ الصندوق والبنك</button><button data-page="reports">▥ التقارير</button><button data-page="settings">⚙ الإعدادات والنسخ</button>
+</nav></aside>
+<main class="main"><div class="top"><div><h1 id="pageTitle">لوحة القيادة</h1><div class="muted" id="today"></div></div><div class="no-print"><button class="secondary" onclick="window.print()">طباعة الصفحة</button></div></div><section id="content"></section><div class="footer">دفتر النقل — إصدار أولي يعمل محلياً على هذا الجهاز. احتفظ بنسخة احتياطية بانتظام.</div></main>
+</div><div class="toast" id="toast"></div>
+<script>
+const KEY='daftar_naql_v1';
+const blank=()=>({customers:[],vehicles:[],drivers:[],trips:[],invoices:[],expenses:[],transactions:[],settings:{company:'شركة نقل البضائع',currency:'دج',phone:'',address:''}});
+let db;try{db=JSON.parse(localStorage.getItem(KEY))||blank()}catch(e){db=blank()}
+const save=()=>localStorage.setItem(KEY,JSON.stringify(db));
+const money=n=>(Number(n)||0).toLocaleString('fr-FR',{maximumFractionDigits:2})+' '+(db.settings.currency||'دج');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const today=new Date().toISOString().slice(0,10);document.getElementById('today').textContent=new Date().toLocaleDateString('ar-DZ',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+let page='dashboard';
+const titles={dashboard:'لوحة القيادة',trips:'الرحلات وأوامر النقل',customers:'الزبائن',vehicles:'الشاحنات',drivers:'السائقون',invoices:'الفواتير',expenses:'المصاريف',accounts:'الصندوق والبنك',reports:'التقارير',settings:'الإعدادات والنسخ الاحتياطي'};
+function toast(s){let t=document.getElementById('toast');t.textContent=s;t.style.display='block';setTimeout(()=>t.style.display='none',2400)}
+function sum(arr,field){return arr.reduce((a,x)=>a+(Number(x[field])||0),0)}
+function render(){document.getElementById('pageTitle').textContent=titles[page];document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));({dashboard, trips, customers, vehicles, drivers, invoices, expenses, accounts, reports, settings}[page])()}
+document.getElementById('nav').addEventListener('click',e=>{let b=e.target.closest('button[data-page]');if(b){page=b.dataset.page;render()}});
+function shell(html){document.getElementById('content').innerHTML=html}
+function dashboard(){let income=sum(db.invoices,'total'),paid=sum(db.invoices,'paid'),cost=sum(db.expenses,'amount'),due=income-paid;
+shell(`<div class="cards"><div class="card"><div class="label">إجمالي الفواتير</div><div class="num">${money(income)}</div></div><div class="card"><div class="label">المبالغ المحصلة</div><div class="num">${money(paid)}</div></div><div class="card"><div class="label">ديون الزبائن</div><div class="num">${money(due)}</div></div><div class="card"><div class="label">مجموع المصاريف</div><div class="num">${money(cost)}</div></div></div><div class="cards"><div class="card"><div class="label">عدد الرحلات</div><div class="num">${db.trips.length}</div></div><div class="card"><div class="label">الشاحنات</div><div class="num">${db.vehicles.length}</div></div><div class="card"><div class="label">الزبائن</div><div class="num">${db.customers.length}</div></div><div class="card"><div class="label">النتيجة التقديرية</div><div class="num">${money(paid-cost)}</div></div></div><div class="notice">النتيجة المعروضة تقديرية: المقبوضات ناقص المصاريف المسجلة، وليست بديلاً عن القوائم المحاسبية القانونية أو التصريح الجبائي.</div><div class="panel"><h2>آخر الفواتير</h2>${table(['رقم الفاتورة','التاريخ','الزبون','المبلغ','المحصل','الباقي'],db.invoices.slice(-5).reverse().map(x=>[x.no,x.date,x.customer,money(x.total),money(x.paid),money(x.total-x.paid)]))}</div>`)}
+function table(headers,rows){if(!rows.length)return '<div class="empty">لا توجد بيانات مسجلة بعد</div>';return `<div class="tablewrap"><table><thead><tr>${headers.map(x=>`<th>${x}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(x=>`<td>${x??''}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+const configs={
+customers:{title:'زبون جديد',fields:[['name','اسم الزبون','text',1],['phone','الهاتف','tel'],['tax','الرقم الجبائي','text'],['address','العنوان','text']],cols:['الاسم','الهاتف','الرقم الجبائي','العنوان'],keys:['name','phone','tax','address']},
+vehicles:{title:'شاحنة جديدة',fields:[['plate','رقم التسجيل','text',1],['type','النوع','text'],['capacity','الحمولة (طن)','number'],['insurance','انتهاء التأمين','date']],cols:['رقم التسجيل','النوع','الحمولة','انتهاء التأمين'],keys:['plate','type','capacity','insurance']},
+drivers:{title:'سائق جديد',fields:[['name','اسم السائق','text',1],['phone','الهاتف','tel'],['license','رقم الرخصة','text'],['salary','الأجر','number']],cols:['الاسم','الهاتف','الرخصة','الأجر'],keys:['name','phone','license','salary']},
+trips:{title:'رحلة جديدة',fields:[['date','التاريخ','date',1],['customer','الزبون','text'],['vehicle','الشاحنة','text'],['driver','السائق','text'],['from','من','text'],['to','إلى','text'],['goods','نوع البضاعة','text'],['price','سعر الرحلة','number']],cols:['التاريخ','الزبون','الشاحنة','السائق','من','إلى','البضاعة','السعر'],keys:['date','customer','vehicle','driver','from','to','goods','price']},
+expenses:{title:'مصروف جديد',fields:[['date','التاريخ','date',1],['category','نوع المصروف','select',1,['وقود','صيانة','أجور','تأمين','رسوم الطريق','قطع غيار','أخرى']],['vehicle','الشاحنة','text'],['description','البيان','text'],['amount','المبلغ','number',1]],cols:['التاريخ','النوع','الشاحنة','البيان','المبلغ'],keys:['date','category','vehicle','description','amount']},
+invoices:{title:'فاتورة جديدة',fields:[['no','رقم الفاتورة','text',1],['date','التاريخ','date',1],['customer','الزبون','text',1],['description','الخدمة / الرحلة','text'],['total','المبلغ الإجمالي','number',1],['paid','المبلغ المحصل','number']],cols:['الرقم','التاريخ','الزبون','الخدمة','الإجمالي','المحصل','الباقي'],keys:['no','date','customer','description','total','paid','balance']}
+};
+function listPage(k){let c=configs[k],rows=db[k].map(x=>c.keys.map(key=>key==='balance'?money(x.total-x.paid):key==='total'||key==='paid'||key==='price'||key==='amount'||key==='salary'?money(x[key]):esc(x[key])));if(k==='invoices')rows=db[k].map(x=>[x.no,x.date,x.customer,x.description,money(x.total),money(x.paid),money(x.total-x.paid)]);shell(`<div class="panel"><div class="toolbar"><input id="search" placeholder="بحث في السجلات..." oninput="filterRows('${k}')"><button onclick="document.getElementById('form-${k}').classList.toggle('hidden')">＋ ${c.title}</button></div><form id="form-${k}" class="hidden" onsubmit="addRecord(event,'${k}')"><div class="gridform">${c.fields.map(f=>`<div class="field"><label>${f[1]}</label>${f[2]==='select'?`<select name="${f[0]}">${f[4].map(o=>`<option>${o}</option>`).join('')}</select>`:`<input name="${f[0]}" type="${f[2]}" ${f[3]===1?'required':''} ${f[2]==='number'?'min="0" step="0.01"':''} ${f[0]==='date'?'value="'+today+'"':''}>`}</div>`).join('')}</div><button type="submit">حفظ السجل</button> <button type="button" class="secondary" onclick="this.form.classList.add('hidden')">إلغاء</button></form></div><div class="panel" id="list-${k}">${table(c.cols,rows)}</div>`)}
+function addRecord(e,k){e.preventDefault();let o=Object.fromEntries(new FormData(e.target));if(k==='invoices'){o.total=+o.total;o.paid=+o.paid;if(o.paid>o.total){toast('المبلغ المحصل لا يمكن أن يتجاوز الإجمالي');return}}if(k==='expenses'||k==='trips')o[k==='expenses'?'amount':'price']=Number(o[k==='expenses'?'amount':'price'])||0;db[k].push(o);save();render();toast('تم حفظ السجل بنجاح')}
+function filterRows(k){let q=document.getElementById('search').value.toLowerCase();document.querySelectorAll(`#list-${k} tbody tr`).forEach(tr=>tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none')}
+function customers(){listPage('customers')}function vehicles(){listPage('vehicles')}function drivers(){listPage('drivers')}function trips(){listPage('trips')}function invoices(){listPage('invoices')}function expenses(){listPage('expenses')}
+function accounts(){let cash=sum(db.transactions.filter(x=>x.type==='قبض'),'amount')-sum(db.transactions.filter(x=>x.type==='صرف'),'amount');shell(`<div class="cards"><div class="card"><div class="label">رصيد الصندوق حسب القيود</div><div class="num">${money(cash)}</div></div></div><div class="panel"><h2>تسجيل حركة مالية</h2><form onsubmit="addTransaction(event)"><div class="gridform"><div class="field"><label>التاريخ</label><input name="date" type="date" value="${today}" required></div><div class="field"><label>نوع الحركة</label><select name="type"><option>قبض</option><option>صرف</option></select></div><div class="field"><label>البيان</label><input name="description" required></div><div class="field"><label>المبلغ</label><input name="amount" type="number" min="0.01" step="0.01" required></div></div><button>حفظ الحركة</button></form></div><div class="panel"><h2>الحركات المسجلة</h2>${table(['التاريخ','النوع','البيان','المبلغ'],db.transactions.slice().reverse().map(x=>[x.date,x.type,x.description,money(x.amount)]))}</div>`)}
+function addTransaction(e){e.preventDefault();let x=Object.fromEntries(new FormData(e.target));x.amount=+x.amount;db.transactions.push(x);save();render();toast('تم تسجيل الحركة')}
+function reports(){let by={};db.expenses.forEach(x=>by[x.category]=(by[x.category]||0)+(+x.amount));shell(`<div class="panel"><h2>ملخص مالي</h2>${table(['المؤشر','القيمة'],[['إجمالي الفواتير',money(sum(db.invoices,'total'))],['إجمالي التحصيلات',money(sum(db.invoices,'paid'))],['ديون الزبائن',money(sum(db.invoices,'total')-sum(db.invoices,'paid'))],['المصاريف',money(sum(db.expenses,'amount'))],['النتيجة النقدية التقديرية',money(sum(db.invoices,'paid')-sum(db.expenses,'amount'))]])}</div><div class="panel"><h2>المصاريف حسب النوع</h2>${table(['نوع المصروف','المجموع'],Object.entries(by).map(([k,v])=>[k,money(v)]))}</div><button onclick="exportCSV()">تصدير الفواتير والمصاريف CSV</button>`)}
+function settings(){shell(`<div class="panel"><h2>بيانات الشركة</h2><form onsubmit="saveSettings(event)"><div class="gridform"><div class="field"><label>اسم الشركة</label><input name="company" value="${esc(db.settings.company)}"></div><div class="field"><label>الهاتف</label><input name="phone" value="${esc(db.settings.phone)}"></div><div class="field wide"><label>العنوان</label><input name="address" value="${esc(db.settings.address)}"></div><div class="field"><label>العملة</label><select name="currency"><option ${db.settings.currency==='دج'?'selected':''}>دج</option><option ${db.settings.currency==='EUR'?'selected':''}>EUR</option></select></div></div><button>حفظ الإعدادات</button></form></div><div class="panel"><h2>النسخ الاحتياطي واسترجاع البيانات</h2><p class="muted">نزّل نسخة JSON للاحتفاظ بكل سجلاتك، ويمكن استرجاعها لاحقاً من هذا الجهاز أو جهاز آخر.</p><div class="toolbar"><button onclick="backup()">تنزيل نسخة احتياطية</button><label class="secondary" style="padding:10px 14px;border-radius:9px;cursor:pointer">استرجاع نسخة <input type="file" accept=".json,application/json" onchange="restore(event)" hidden></label></div><button class="danger" onclick="clearData()">مسح جميع البيانات</button></div><div class="notice">تنبيه: النسخة الحالية تحفظ البيانات في متصفح الجهاز فقط. لا يوجد تزامن تلقائي بين الهاتف والكمبيوتر. احتفظ بنسخ احتياطية ولا تسجل بيانات حقيقية قبل اختبار النظام.</div>`)}
+function saveSettings(e){e.preventDefault();db.settings=Object.fromEntries(new FormData(e.target));save();render();toast('تم حفظ الإعدادات')}
+function backup(){let a=document.createElement('a'),u=URL.createObjectURL(new Blob([JSON.stringify(db,null,2)],{type:'application/json'}));a.href=u;a.download='daftar-naql-backup-'+today+'.json';a.click();URL.revokeObjectURL(u)}
+function restore(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let x=JSON.parse(r.result);if(!x.settings||!Array.isArray(x.invoices))throw 0;db=x;save();render();toast('تم استرجاع النسخة')}catch(_){toast('ملف النسخة غير صالح')}};r.readAsText(f)}
+function clearData(){if(confirm('هل أنت متأكد؟ سيتم حذف جميع البيانات من هذا المتصفح.')){db=blank();save();render();toast('تم مسح البيانات')}}
+function exportCSV(){let lines=['النوع,الرقم/التاريخ,الاسم/البيان,المبلغ,المحصل'];db.invoices.forEach(x=>lines.push(['فاتورة',x.no,x.customer,x.total,x.paid].map(csv).join(',')));db.expenses.forEach(x=>lines.push(['مصروف',x.date,x.category,x.amount,''].map(csv).join(',')));let blob=new Blob(['\ufeff'+lines.join('\n')],{type:'text/csv;charset=utf-8'}),a=document.createElement('a'),u=URL.createObjectURL(blob);a.href=u;a.download='rapport-comptable.csv';a.click();URL.revokeObjectURL(u)}
+function csv(x){return '"'+String(x??'').replace(/"/g,'""')+'"'}
+render();
+</script>
+<script>
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").catch(err => console.warn("تعذر تسجيل وضع العمل دون إنترنت:", err));
+  });
+}
+</script>
+\n</body></html>
